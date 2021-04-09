@@ -1,0 +1,67 @@
+
+.link{
+  cursor: pointer;
+}
+.link:hover{
+  font-weight: bold;
+}
+
+.table-props {
+  th, td, thead th, tbody th{
+    border: 0px;
+  }
+  td{
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+}
+*[disabled]{
+  cursor: not-allowed;
+}
+
+.font-mono{
+  font-family: Lucida Console,Lucida Sans Typewriter,monaco, Bitstream Vera Sans Mono,monospace; 
+  line-height: normal;
+  font-size: 0.9em;
+  color: black;
+}
+
+.h-min{
+  min-height: 200px;
+}
+//.tab-content{
+//  border: 1px solid $gray-300;
+//  border-width: 0 1px 1px 1px;
+//}
+.a{
+  cursor: pointer;
+  @extend a;
+}
+
+.hover{
+  @include hover() {
+    color: $table-hover-color;
+    background-color: $table-hover-bg;
+  }
+}
+
+.service-icon{
+  @extend .m-1;
+  @extend .p-2;
+  @extend .rounded;
+  @extend .border;
+  input{
+    display: none;
+  }
+  .fa{
+    font-size: 2em;
+  }
+  &.active{
+    @extend .border-primary;
+  }
+}
+
+th.w-name{
+  width: 30%;
+}
