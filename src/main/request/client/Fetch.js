@@ -28,10 +28,10 @@ export const Fetch = ({ value, onChange }) => {
 const FormItem = ({ label, name, value, onChange, options = [] }) => {
     return (
         <>
-            <label className="col-2">
+            <label className="col-sm-2 col-4">
                 {label}
             </label>
-            <div className="col-4">
+            <div className="col-sm-4 col-8">
                 <select className="custom-select"
                     name={name}
                     value={value}

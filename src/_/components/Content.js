@@ -18,10 +18,10 @@ export const ContentData = ({ value, onChange, disabled }) => {
     const options = ['application/json', 'application/xxx-form', '']
     return (
         <div className="row">
-            <label className="col-3">
+            <label className="col-sm-3 col-5">
                 Content Type
             </label>
-            <div className="col-7">
+            <div className="col-sm-5 col-7">
                 <select name="contentType"
                     value={value.contentType}
                     onChange={onChange}
@@ -30,7 +30,7 @@ export const ContentData = ({ value, onChange, disabled }) => {
                     {options.map(it => <option key={it}>{it}</option>)}
                 </select>
             </div>
-            <div className="col-2">
+            <div className="col-sm-4 col-12 text-center mt-1">
                 <button onClick={onFormatClick} type="button"
                     className="btn btn-outline-dark">
                     Format Content

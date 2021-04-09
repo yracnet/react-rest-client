@@ -4,6 +4,7 @@
         "**/.gitignore": true,
         "**/jsconfig.json": true,
         "**/*.lock": true,
-        "**/*.md": true
+        "**/*.png": true,
+        "**/*.md": false
     }
 }

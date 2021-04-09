@@ -7,14 +7,14 @@ const ICONS = ['globe', 'institution', 'rocket', 'send-o', 'hashtag', 'linux', '
 export const RestService = ({ value, onChange, parent, children }) => {
 
     const ref = useRef()
-    children = children ? <div className="align-self-center btn-group">{children}</div> : null
+    children = children ? <div className="media-right align-self-center btn-group">{children}</div> : null
     parent = parent || parent === 0 ? parent + '.' : ''
     const onToggleClick = (e) => {
         ref.current.classList.toggle('show')
     }
 
     return (
-        <div className="media">
+        <div className="media media-xs">
             <div className="btn-group" role="group">
                 <div className="btn dropdown-toggle" onClick={onToggleClick}>
                     <i className={"h1 m-0 fa fa-" + value.icon}></i>
@@ -77,7 +77,7 @@ export const RestTarget = ({ value, onChange, parent, children, disabled }) => {
     children = children ? <div className="input-group-append">{children}</div> : null
     parent = parent || parent === 0 ? parent + '.' : ''
     return (
-        <div className="input-group mb-3">
+        <div className="input-group mb-3 input-group-xs">
             <div className="input-group-prepend">
                 <select className="custom-select custom-select-lg font-weight-bold text-danger"
                     name={parent + "method"}

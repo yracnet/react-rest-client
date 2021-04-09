@@ -39,12 +39,12 @@
   @extend a;
 }
 
-.hover{
-  @include hover() {
-    color: $table-hover-color;
-    background-color: $table-hover-bg;
-  }
-}
+//.hover{
+//  @include hover() {
+//    color: $table-hover-color;
+//    background-color: $table-hover-bg;
+//  }
+//}
 
 .service-icon{
   @extend .m-1;
@@ -64,4 +64,30 @@
 
 th.w-name{
   width: 30%;
+}
+
+
+
+@include media-breakpoint-down(sm) {
+  .input-group-xs{
+    .input-group-prepend,
+    .form-control,
+    .input-group-append,
+    >*{
+      width: 100%;
+      border-radius: 0;
+    }
+  }
+  .media-xs{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    >*{
+      flex: 1 100%;
+      margin: 0;
+    }
+    >.media-right{
+      order: 4;
+    }
+  }
 }
