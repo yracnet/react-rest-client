@@ -63,9 +63,11 @@ export const Client = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { url, ...params } = { ...request }
-      if (params.body) {
-        params.body = request.content
+      const { url, ...params } = transformFetchRequest(service);
+      if (['HEAD', 'GET'].indexOf(params.method) === -1) {
+        params.body = service.content
+      } else {
+        params.body = undefined
       }
       const req = new Request(url, params);
       console.debug('Request--->', req);
