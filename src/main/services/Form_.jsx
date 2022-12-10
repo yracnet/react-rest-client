@@ -42,15 +42,15 @@ export const Form = () => {
           </Tab.Item>
         </Tab>
         <button className="btn btn-secondary p-2" type="button">
-          <i className="fa fa-trash mr-2" />
+          <i className="fa fa-trash me-2" />
           Cancelar
         </button>
         <button className="btn btn-primary p-2" type="button">
-          <i className="fa fa-save mr-2" />
+          <i className="fa fa-save me-2" />
           Guardar
         </button>
         <button className="btn btn-danger p-2" type="button">
-          <i className="fa fa-trash mr-2" />
+          <i className="fa fa-trash me-2" />
           Eliminar
         </button>
       </div>

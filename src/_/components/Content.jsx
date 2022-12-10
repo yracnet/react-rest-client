@@ -24,7 +24,7 @@ export const ContentData = ({ value, onChange, disabled }) => {
           value={value.contentType}
           onChange={onChange}
           disabled={disabled}
-          className="custom-select"
+          className="form-select"
         >
           {options.map((it) => (
             <option key={it}>{it}</option>

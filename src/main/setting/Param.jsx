@@ -20,7 +20,7 @@ export const Param = () => {
         className="align-self-center btn btn-sm btn-primary"
         type="submit"
       >
-        <i className="fa fa-save mr-2" />
+        <i className="fa fa-save me-2" />
         Guardar
       </button>
     </form>

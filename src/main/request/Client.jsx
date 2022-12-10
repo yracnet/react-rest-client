@@ -106,7 +106,7 @@ export const Client = () => {
             type="button"
             disabled={!id}
           >
-            <i className="fa fa-save mr-2" />
+            <i className="fa fa-save me-2" />
             Save
           </button>
           <button
@@ -114,7 +114,7 @@ export const Client = () => {
             onClick={onSaveCopy}
             type="button"
           >
-            <i className="fa fa-save mr-2" />
+            <i className="fa fa-save me-2" />
             Save copy
           </button>
         </RestService>
@@ -122,7 +122,7 @@ export const Client = () => {
       <div className="card-body">
         <RestTarget value={service} onChange={onServiceChange}>
           <button className="btn btn-primary" type="submit">
-            <i className="fa fa-send mr-2" />
+            <i className="fa fa-send me-2" />
             Enviar
           </button>
         </RestTarget>

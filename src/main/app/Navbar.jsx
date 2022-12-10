@@ -17,7 +17,7 @@ export const Navbar = () => {
               className="d-inline-block align-top"
               alt="Rest Client"
             />
-            <b className="h3 font-weight-bold ml-1">Rest Client</b>
+            <b className="h3 font-weight-bold ms-1">Rest Client</b>
           </a>
           <div className="collapse navbar-collapse">
             <nav className="navbar-nav bd-navbar-nav">
@@ -26,7 +26,7 @@ export const Navbar = () => {
                 activeClassName="active"
                 to="/request"
               >
-                <i className="fa fa-send mr-2" />
+                <i className="fa fa-send me-2" />
                 Request
               </NavLink>
               <NavLink
@@ -34,7 +34,7 @@ export const Navbar = () => {
                 activeClassName="active"
                 to="/service"
               >
-                <i className="fa fa-server mr-2" />
+                <i className="fa fa-server me-2" />
                 Services
               </NavLink>
               <NavLink
@@ -42,7 +42,7 @@ export const Navbar = () => {
                 activeClassName="active"
                 to="/setting"
               >
-                <i className="fa fa-cogs mr-2" />
+                <i className="fa fa-cogs me-2" />
                 Settings
               </NavLink>
             </nav>

@@ -6,13 +6,26 @@
   font-weight: bold;
 }
 
+.form-select option {
+  font-family: var(--bs-body-font-family);
+}
+
+
 .table-props {
+  > :not(caption) > * > * {
+    padding: 0.5rem 0.5rem;
+    background-color: var(--bs-table-bg);
+    border-bottom-width: 1px;
+    box-shadow: inset 0 0 0 9999px var(--bs-table-bg);
+  }
   th, td, thead th, tbody th{
     border: 0px;
   }
-  td{
-    padding-left: 2px;
-    padding-right: 2px;
+  td {
+    padding: 0 2px;
+  }
+  th {
+    padding: 0;
   }
 
 }
@@ -66,13 +79,17 @@ th.w-name{
   width: 30%;
 }
 
-
+.media {
+  display: flex;
+  align-items: flex-start;
+  .media-body {
+    flex: 1;
+  }
+}
 
 @include media-breakpoint-down(sm) {
   .input-group-xs{
-    .input-group-prepend,
     .form-control,
-    .input-group-append,
     >*{
       width: 100%;
       border-radius: 0;
@@ -89,5 +106,19 @@ th.w-name{
     >.media-right{
       order: 4;
     }
+  }
+}
+
+.btn-primary,
+.btn-danger{
+  color: $white;
+  &:hover{
+    color: $white;
+  }
+}
+.btn-outline-primary,
+.btn-outline-danger{
+  &:hover{
+    color: $white;
   }
 }

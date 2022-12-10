@@ -21,14 +21,14 @@ export const List = () => {
         <div key={it.id} className="p-2 my-1 border rounded border-dark">
           <RestResumen value={it} full>
             <Link to={"/request/" + it.id} className="btn btn-outline-primary">
-              <i className="fa fa-play mr-1" />
+              <i className="fa fa-play me-1" />
               Run
             </Link>
             <button
               onClick={(e) => onRemoveClick(it)}
               className="btn btn-outline-danger"
             >
-              <i className="fa fa-trash mr-1" />
+              <i className="fa fa-trash me-1" />
               Remove
             </button>
           </RestResumen>
@@ -41,7 +41,7 @@ export const List = () => {
 
                             <Link to={'/service/' + it.id}
                                 className="btn btn-outline-dark">
-                                <i className="fa fa-pencil mr-1" />
+                                <i className="fa fa-pencil me-1" />
                                 Edit
                             </Link>
 

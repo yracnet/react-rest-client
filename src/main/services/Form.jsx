@@ -38,12 +38,12 @@ export const Form = () => {
       </div>
       <div className="card-footer btn-group">
         <Link to="/service" className="btn btn-secundary">
-          <i className="fa fa-times mr-1" />
+          <i className="fa fa-times me-1" />
           Cancel
         </Link>
         <span className="w-50"></span>
         <button className="btn btn-outline-primary" type="submit">
-          <i className="fa fa-pencil mr-1" />
+          <i className="fa fa-pencil me-1" />
           Save
         </button>
       </div>

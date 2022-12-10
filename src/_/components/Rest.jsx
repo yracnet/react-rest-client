@@ -73,7 +73,7 @@ export const RestService = ({ value, onChange, parent, children }) => {
           ))}
         </div>
       </div>
-      <div className="media-body mr-2">
+      <div className="media-body me-2">
         <input
           name={parent + "name"}
           value={value.name}
@@ -99,7 +99,7 @@ export const RestResumen = ({ value, children, full }) => {
 
   return (
     <div className="media">
-      <div className="align-self-center mr-2">
+      <div className="align-self-center me-2">
         <i className={"fs-1 m-0 fa fa-" + value.icon}></i>
       </div>
       <div className="media-body">
@@ -107,7 +107,7 @@ export const RestResumen = ({ value, children, full }) => {
         <div className="text-dark">{value.description}</div>
       </div>
       {full && (
-        <div className="align-self-center mr-2 text-right">
+        <div className="align-self-center me-2 text-right">
           <div className="h5 m-0 font-weight-bold text-danger">
             {value.method}
           </div>
@@ -121,25 +121,21 @@ export const RestResumen = ({ value, children, full }) => {
 
 export const RestTarget = ({ value, onChange, parent, children, disabled }) => {
   const methods = ["GET", "POST"];
-  children = children ? (
-    <div className="input-group-append">{children}</div>
-  ) : null;
   parent = parent || parent === 0 ? parent + "." : "";
   return (
     <div className="input-group mb-3 input-group-xs">
-      <div className="input-group-prepend">
-        <select
-          className="custom-select custom-select-lg font-weight-bold text-danger"
-          name={parent + "method"}
-          value={value.method}
-          onChange={onChange}
-          disabled={disabled}
-        >
-          {methods.map((it) => (
-            <option key={it}>{it}</option>
-          ))}
-        </select>
-      </div>
+      <select
+        className="form-select form-select-lg font-weight-bold text-danger"
+        name={parent + "method"}
+        value={value.method}
+        onChange={onChange}
+        disabled={disabled}
+      >
+        {methods.map((it) => (
+          <option key={it}>{it}</option>
+        ))}
+      </select>
+
       <input
         type="text"
         className="form-control form-control-lg font-weight-bold  text-primary"

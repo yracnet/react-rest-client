@@ -7,7 +7,7 @@ export const ServiceIndex = () => {
   return (
     <div className="card">
       <div className="card-header media">
-        <div className="align-self-center mr-1 ">
+        <div className="align-self-center me-1 ">
           <i className="h2 m-1 fa fa-server"></i>
         </div>
         <div className="media-body">

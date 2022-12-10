@@ -1,7 +1,6 @@
-export * from "./Tab"
-export * from "./Prop"
-export * from "./Rest"
-export * from "./Content"
+export * from "./Tab";
+export * from "./Prop";
+export * from "./Rest";
+export * from "./Content";
 
-
-//export const Tab = Tab
+//export      const Tab = Tab
