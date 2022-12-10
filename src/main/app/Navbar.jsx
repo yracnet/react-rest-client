@@ -1,8 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import logo from "_/images/logo.png";
-//import 'popper.js/dist/popper'
-//import 'bootstrap/dist/js/bootstrap'
+//import       'popper.js/dist/popper'
+//import       'bootstrap/dist/js/bootstrap'
 
 export const Navbar = () => {
   return (
