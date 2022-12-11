@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useHistory, useParams } from "react-router";
+import { useNavigate, useParams } from "react-router-dom";
 
 import {
   Tab,
@@ -7,29 +7,17 @@ import {
   ContentData,
   ContentRaw,
   RestService,
-} from "_/components";
+} from "_/organism";
 import { useForm } from "_/hooks/useForm";
 import {
   transformErrorResponse,
   transformFetchRequest,
   transformFetchResponse,
 } from "_/helpers/transform";
-import { Fetch } from "./client/Fetch";
-import { Header } from "./client/Header";
+import { Fetch } from "_/molecule/fetch";
+import { Header } from "_/molecule/header";
 import { serviceStore } from "_/store";
 
-//const SERVICE_INIT = {
-//  icon: 'calendar',
-//  name: '[W-CLOCK] Get Time',
-//  description: 'Api para obtener la fecha actual',
-//  method: 'GET',
-//  target: 'http://worldclockapi.com/api/json/utc',
-//  path: '/now',
-//  headers: [],
-//  contentType: '',
-//  content: '',
-//  fetch: {}
-//}
 const SERVICE_INIT = {
   icon: "server",
   name: "...",
@@ -49,8 +37,8 @@ const RESPONSE_INIT = {
   raw: "",
 };
 
-export const Client = () => {
-  const history = useHistory();
+const RequestPage = () => {
+  const navigate = useNavigate();
   const { id } = useParams();
   const [service, setService, onServiceChange] = useForm(SERVICE_INIT);
   const [request, setRequest] = useState({});
@@ -94,7 +82,8 @@ export const Client = () => {
   };
   const onSaveCopy = () => {
     const id = serviceStore.create(service);
-    history.push("/request/" + id);
+    //console.log(">>>", navigate);
+    navigate("/request/" + id);
   };
   return (
     <form className="card" onSubmit={onSubmit}>
@@ -165,3 +154,5 @@ export const Client = () => {
     </form>
   );
 };
+
+export default RequestPage;

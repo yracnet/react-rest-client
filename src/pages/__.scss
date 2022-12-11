@@ -1,0 +1,32 @@
+// Icons
+@import "font-awesome/css/font-awesome.css";
+
+// Custom Bootstrap Colors
+@import "_/theme/variables.scss";
+@import "bootstrap/scss/bootstrap.scss";
+
+// Custom Bootstrap Rules
+@import "_/theme/custom.scss";
+
+
+
+html, body, #root {
+    max-width: 100vw;
+    width: 100%;
+    min-height: 100vh;
+    height: 100vh;
+}
+#root {
+    display: flex;
+    flex-direction: column;
+    > header{
+
+    }
+    > main{
+        flex-grow: 1;
+        flex: 1 1 auto;
+    }
+    > footer{
+
+    }
+}

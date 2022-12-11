@@ -1,17 +1,17 @@
 import { useEffect } from "react";
 import { useForm } from "_/hooks/useForm";
-import { headerStore } from "_/store";
-import { PropValue } from "_/components";
+import { paramStore } from "_/store";
+import { PropValue } from "_/organism";
 
-export const Header = () => {
+const SettingParamsPage = () => {
   const [value, setValue, onChange] = useForm([]);
   useEffect(() => {
-    const value = headerStore.values();
+    const value = paramStore.values();
     setValue(value);
   }, [setValue]);
   const onSubmit = async (e) => {
     e.preventDefault();
-    headerStore.bulk(value);
+    paramStore.bulk(value);
   };
   return (
     <form onSubmit={onSubmit}>
@@ -26,3 +26,5 @@ export const Header = () => {
     </form>
   );
 };
+
+export default SettingParamsPage;

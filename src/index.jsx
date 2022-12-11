@@ -1,11 +1,15 @@
-import React from "react";
+import React, { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
-import RestClientApp from "./main/RestClientApp";
+import { AppRouter, AppRouterProvider } from "./app";
 
 const root = document.querySelector("#root");
 
 ReactDOM.createRoot(root).render(
-  <React.StrictMode>
-    <RestClientApp />
-  </React.StrictMode>
+  <StrictMode>
+    <AppRouterProvider />
+  </StrictMode>
 );
+
+// ReactDOM.createRoot(root).render(
+//   <RestClientApp />
+// );

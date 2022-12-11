@@ -1,4 +1,4 @@
-import { PropValue } from "_/components";
+import { PropValue } from "_/organism";
 
 export const Header = ({ value, setValue, onChange, ...props }) => {
   const setHeaders = (headers) => {
