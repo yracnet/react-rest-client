@@ -20,7 +20,7 @@ const MainPage = () => {
               className="d-inline-block align-top"
               alt="Rest Client"
             />
-            <Text as="b" mx="2">
+            <Text as="b" mx="1">
               Rest Client
             </Text>
           </Navbar.Brand>

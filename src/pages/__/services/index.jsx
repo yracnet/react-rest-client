@@ -48,7 +48,7 @@ const ServiceListPage2 = () => {
         <ListGroup variant="flush">
           <ListGroup.Item>
             <Icon name="calendar" />
-            <Text as="b" mx="2">
+            <Text as="b" mx="1">
               [W-CLOCK] Get Time
             </Text>
             <p>Api para obtener la fecha actual</p>
@@ -59,17 +59,17 @@ const ServiceListPage2 = () => {
             <ButtonGroup>
               <Button variant="outline-primary">
                 <Icon name="play" />
-                <Text mx="2">Run</Text>
+                <Text mx="1">Run</Text>
               </Button>
               <Button variant="outline-danger">
                 <Icon name="trash" />
-                <Text mx="2">Remove</Text>
+                <Text mx="1">Remove</Text>
               </Button>
             </ButtonGroup>
           </ListGroup.Item>
           <ListGroup.Item>
             <Icon name="calendar" />
-            <Text as="b" mx="2">
+            <Text as="b" mx="1">
               [W-CLOCK] Get Time Bolivia
             </Text>
             <p>Api para obtener la fecha actual</p>
@@ -80,11 +80,11 @@ const ServiceListPage2 = () => {
             <ButtonGroup>
               <Button variant="outline-primary">
                 <Icon name="play" />
-                <Text mx="2">Run</Text>
+                <Text mx="1">Run</Text>
               </Button>
               <Button variant="outline-danger">
                 <Icon name="trash" />
-                <Text mx="2">Remove</Text>
+                <Text mx="1">Remove</Text>
               </Button>
             </ButtonGroup>
           </ListGroup.Item>

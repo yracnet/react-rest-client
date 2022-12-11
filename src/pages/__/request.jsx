@@ -8,7 +8,7 @@ const RequestPage = () => {
     <Card>
       <Card.Header>
         <Icon name="send" size="1" />
-        <Text mx="2" size="5">
+        <Text mx="1" size="5">
           <b>Request</b>
         </Text>
       </Card.Header>

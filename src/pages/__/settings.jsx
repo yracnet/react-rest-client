@@ -9,7 +9,7 @@ const SettingsPage = () => {
     <Card>
       <Card.Header>
         <Icon name="cogs" size="1" />
-        <Text mx="2" size="5">
+        <Text mx="1" size="5">
           <b>Settings</b>
         </Text>
       </Card.Header>
@@ -18,25 +18,25 @@ const SettingsPage = () => {
           <Nav.Item>
             <Nav.Link as={NavLink} to="./headers">
               <Icon name="bars" />
-              <Text mx="2">Headers</Text>
+              <Text mx="1">Headers</Text>
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
             <Nav.Link as={NavLink} to="./params">
               <Icon name="rss" />
-              <Text mx="2">Params</Text>
+              <Text mx="1">Params</Text>
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
             <Nav.Link as={NavLink} to="./options">
               <Icon name="list" />
-              <Text mx="2">Options</Text>
+              <Text mx="1">Options</Text>
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
             <Nav.Link as={NavLink} to="./">
               <Icon name="question" />
-              <Text mx="2">Help</Text>
+              <Text mx="1">Help</Text>
             </Nav.Link>
           </Nav.Item>
         </Nav>

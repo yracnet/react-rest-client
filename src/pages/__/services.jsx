@@ -8,7 +8,7 @@ const ServicePage = () => {
     <Card>
       <Card.Header>
         <Icon name="server" size="1" />
-        <Text mx="2" size="5">
+        <Text mx="1" size="5">
           <b>Services</b>
         </Text>
       </Card.Header>

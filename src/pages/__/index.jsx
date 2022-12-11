@@ -16,17 +16,17 @@ const IndexPage = () => {
         <ListGroup variant="flush">
           <ListGroup.Item>
             <Icon />
-            <Text mx="2">react</Text>
+            <Text mx="1">react</Text>
             <Badge>18.X</Badge>
           </ListGroup.Item>
           <ListGroup.Item>
             <Icon />
-            <Text mx="2">react-router</Text>
+            <Text mx="1">react-router</Text>
             <Badge>6.X</Badge>
           </ListGroup.Item>
           <ListGroup.Item>
             <Icon />
-            <Text mx="2">react-bootstrap</Text>
+            <Text mx="1">react-bootstrap</Text>
             <Badge>2.X</Badge>
           </ListGroup.Item>
         </ListGroup>
