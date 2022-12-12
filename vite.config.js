@@ -23,6 +23,8 @@ export default defineConfig({
       customChunk: (args) => {
         let { file = "" } = args;
         if (file.startsWith("src/pages/")) {
+          file = file.replace(/_part.*/, "part");
+          //file = file.replace(/part\.|\.part|part\//, "part");
           file = file.substring(4);
           file = file.replace(/\.[^.$]+$/, "");
           return file;
@@ -53,6 +55,7 @@ export default defineConfig({
       //syncIndex: false,
       //importMode: () => "sync",
       resolver: "react",
+      exclude: ["_part"],
     }),
   ],
 });

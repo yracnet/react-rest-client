@@ -1,30 +1,25 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-
-import {
-  Tab,
-  RestTarget,
-  ContentData,
-  ContentRaw,
-  RestService,
-} from "_/organism";
+import { ContentData, ContentRaw } from "_/organism";
 import { useForm } from "_/hooks/useForm";
 import {
   transformErrorResponse,
   transformFetchRequest,
   transformFetchResponse,
 } from "_/helpers/transform";
-import { Fetch } from "_/molecule/fetch";
-import { Header } from "_/molecule/header";
+import { Fetch } from "./_part/fetch";
+import { Header } from "./_part/header";
+import { RestTarget, RestService } from "./_part/rest";
 import { serviceStore } from "_/store";
+import { Card, Tab, Tabs } from "react-bootstrap";
+import Title from "_/atom/title";
 
 const SERVICE_INIT = {
   icon: "server",
   name: "...",
   description: "...",
   method: "POST",
-  target: "http://localhost:8080/api",
-  path: "/status",
+  url: "http://localhost:8080/api/status",
   headers: [],
   contentType: "",
   content: "",
@@ -86,71 +81,73 @@ const RequestPage = () => {
     navigate("/request/" + id);
   };
   return (
-    <form className="card" onSubmit={onSubmit}>
-      <div className="card-header">
-        <RestService value={service} onChange={onServiceChange}>
-          <button
-            className="btn btn-dark p-2"
-            onClick={onSave}
-            type="button"
-            disabled={!id}
-          >
-            <i className="fa fa-save me-2" />
-            Save
-          </button>
-          <button
-            className="btn btn-outline-dark p-2"
-            onClick={onSaveCopy}
-            type="button"
-          >
-            <i className="fa fa-save me-2" />
-            Save copy
-          </button>
-        </RestService>
-      </div>
-      <div className="card-body">
-        <RestTarget value={service} onChange={onServiceChange}>
-          <button className="btn btn-primary" type="submit">
-            <i className="fa fa-send me-2" />
-            Enviar
-          </button>
-        </RestTarget>
-        <h4 className="card-title">Request</h4>
-        <Tab activeName="content" style={{ minHeight: 300 }}>
-          <Tab.Item title="Content" name="content">
-            <ContentData value={service} onChange={onServiceChange} />
-          </Tab.Item>
-          <Tab.Item title="Headers" name="header">
-            <Header
-              value={service}
-              setValue={setService}
-              onChange={onServiceChange}
-            />
-          </Tab.Item>
-          <Tab.Item title="Fetch" name="fetch">
-            <Fetch value={service} onChange={onServiceChange} />
-          </Tab.Item>
-          <Tab.Item title="Raw" name="raw">
-            <ContentRaw value={request} />
-          </Tab.Item>
-        </Tab>
-        <h4 className="card-title">Response</h4>
-        <Tab activeName="content" style={{ minHeight: 300 }}>
-          <Tab.Item title="Content" name="content">
-            <ContentData
-              value={response}
-              onChange={onResponseChange}
-              disabled
-            />
-          </Tab.Item>
-          <Tab.Item title="Headers" name="header">
-            <Header value={response} disabled />
-          </Tab.Item>
-          <Tab.Item title="Raw" name="raw">
-            <ContentRaw value={response.raw} />
-          </Tab.Item>
-        </Tab>
-      </div>
+    <form onSubmit={onSubmit}>
+      <Card>
+        <Card.Header>
+          <RestService value={service} onChange={onServiceChange}>
+            <button
+              className="btn btn-dark p-2"
+              onClick={onSave}
+              type="button"
+              disabled={!id}
+            >
+              <i className="fa fa-save me-2" />
+              Save
+            </button>
+            <button
+              className="btn btn-outline-dark p-2"
+              onClick={onSaveCopy}
+              type="button"
+            >
+              <i className="fa fa-save me-2" />
+              Save copy
+            </button>
+          </RestService>
+        </Card.Header>
+        <Card.Body>
+          <RestTarget value={service} onChange={onServiceChange}>
+            <button className="btn btn-primary" type="submit">
+              <i className="fa fa-send me-2" />
+              Enviar
+            </button>
+          </RestTarget>
+          <Card.Title>Request</Card.Title>
+          <Tabs activeName="content">
+            <Tab eventKey="content" title={<Title icon="edit">Content</Title>}>
+              <ContentData value={service} onChange={onServiceChange} />
+            </Tab>
+            <Tab eventKey="header" title={<Title icon="list">Headers</Title>}>
+              <Header
+                value={service}
+                setValue={setService}
+                onChange={onServiceChange}
+              />
+            </Tab>
+            <Tab eventKey="fetch" title={<Title icon="send">Fetch</Title>}>
+              <Fetch value={service} onChange={onServiceChange} />
+            </Tab>
+            <Tab eventKey="raw" title={<Title icon="file-o">Raw</Title>}>
+              <ContentRaw value={request} />
+            </Tab>
+          </Tabs>
+          <Card.Title>Response</Card.Title>
+          <Tabs activeName="content">
+            <Tab eventKey="content" title={<Title icon="edit">Content</Title>}>
+              <ContentData
+                value={response}
+                onChange={onResponseChange}
+                disabled
+              />
+            </Tab>
+            <Tab eventKey="header" title={<Title icon="list">Headers</Title>}>
+              <Header value={response} disabled />
+            </Tab>
+            <Tab eventKey="raw" title={<Title icon="file-o">Raw</Title>}>
+              <ContentRaw value={response.raw} />
+            </Tab>
+          </Tabs>
+        </Card.Body>
+      </Card>
     </form>
   );
 };

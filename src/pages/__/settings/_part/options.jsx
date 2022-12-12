@@ -3,7 +3,7 @@ import { useForm } from "_/hooks/useForm";
 import { optionStore } from "_/store";
 import { PropValues } from "_/organism";
 
-const SettingOptionPage = () => {
+const OptionTab = () => {
   const [value, setValue, onChange] = useForm([]);
   useEffect(() => {
     const value = optionStore.values();
@@ -27,4 +27,4 @@ const SettingOptionPage = () => {
   );
 };
 
-export default SettingOptionPage;
+export default OptionTab;

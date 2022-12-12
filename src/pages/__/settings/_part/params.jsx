@@ -3,7 +3,7 @@ import { useForm } from "_/hooks/useForm";
 import { paramStore } from "_/store";
 import { PropValue } from "_/organism";
 
-const SettingParamsPage = () => {
+const ParamsTab = () => {
   const [value, setValue, onChange] = useForm([]);
   useEffect(() => {
     const value = paramStore.values();
@@ -27,4 +27,4 @@ const SettingParamsPage = () => {
   );
 };
 
-export default SettingParamsPage;
+export default ParamsTab;

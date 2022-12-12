@@ -3,7 +3,7 @@ import { useForm } from "_/hooks/useForm";
 import { headerStore } from "_/store";
 import { PropValue } from "_/organism";
 
-const HeadersPage = () => {
+const HeadersTab = () => {
   const [value, setValue, onChange] = useForm([]);
   useEffect(() => {
     const value = headerStore.values();
@@ -27,4 +27,4 @@ const HeadersPage = () => {
   );
 };
 
-export default HeadersPage;
+export default HeadersTab;

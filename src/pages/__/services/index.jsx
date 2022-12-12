@@ -3,7 +3,7 @@ import Text from "_/atom/text";
 import Icon from "_/atom/icon";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { RestResumen } from "_/organism";
+import { RestResumen } from "./_part/rest";
 import { serviceStore } from "_/store";
 
 const ServiceListPage = () => {

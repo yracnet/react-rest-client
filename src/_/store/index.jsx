@@ -27,15 +27,14 @@ const INIT_SERVICES = [
     name: "[W-CLOCK] Get Time",
     description: "Api para obtener la fecha actual",
     method: "GET",
-    target: "http://worldclockapi.com/api/json/utc",
-    path: "/now",
+    url: "http://worldclockapi.com/api/json/utc/now",
     headers: [],
     contentType: "",
     content: "",
     fetch: {},
   },
-  //{ id: -2, icon: 'sign-in', name: '[AUTH] Login', description: 'Login token', method: 'GET', target: 'http://127.0.0.1:3000/api', path: '/auth/login', headers: [], contentType: '', content: '', fetch: {} },
-  //{ id: -3, icon: 'sign-out', name: '[AUTH] Logout', description: 'Logout token', method: 'POST', target: 'http://127.0.0.1:3000/api', path: '/auth/logout', headers: [], contentType: '', content: '', fetch: {} }
+  //{ id: -2, icon: 'sign-in', name: '[AUTH] Login', description: 'Login token', method: 'GET', url: 'http://127.0.0.1:3000/api/auth/login', headers: [], contentType: '', content: '', fetch: {} },
+  //{ id: -3, icon: 'sign-out', name: '[AUTH] Logout', description: 'Logout token', method: 'POST', url: 'http://127.0.0.1:3000/api/auth/logout', headers: [], contentType: '', content: '', fetch: {} }
 ];
 
 const createStore = (KEY, INIT) => {

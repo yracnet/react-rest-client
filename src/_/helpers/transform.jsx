@@ -1,6 +1,5 @@
 export const transformFetchRequest = (requestForm) => {
-  let { method, target, path, headers, contentType, content, fetch } =
-    requestForm;
+  let { method, url, headers, contentType, content, fetch } = requestForm;
   headers = [...headers]; //fix reference
   let body = undefined;
   if (["HEAD", "GET"].indexOf(method) === -1) {
@@ -15,7 +14,7 @@ export const transformFetchRequest = (requestForm) => {
   fetch = cleanEmpty(fetch);
   return {
     method,
-    url: target + path,
+    url,
     headers,
     body,
     ...fetch,

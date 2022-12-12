@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const Tab = ({ children = [], activeName: init, ...props }) => {
+export const XTab = ({ children = [], activeName: init, ...props }) => {
   const [activeName, setActiveName] = useState(init);
   let navLinks = children.map((item) => {
     let { title, name } = item.props;
@@ -36,4 +36,4 @@ export const Item = ({ name, activeName, children }) => {
   let active = activeName === name ? "show active" : "";
   return <div className={"tab-pane fade " + active}>{children}</div>;
 };
-Tab.Item = Item;
+XTab.Item = Item;

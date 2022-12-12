@@ -46,7 +46,7 @@ const MainPage = () => {
       <Navbar as="footer" bg="white">
         <Container>
           <a href="https://hiskasoft.com" className="mx-auto text-primary">
-            Copyright © 2021 - HiskaSoft
+            Copyright © 2022 - HiskaSoft
           </a>
         </Container>
       </Navbar>
